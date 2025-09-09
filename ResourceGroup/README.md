@@ -59,4 +59,4 @@ output "rg_id" {
 
 ## License
 
-MIT
+Post Group
