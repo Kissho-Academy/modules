@@ -1,4 +1,4 @@
-# This resource captures the time when Terraform is first applied.
+# Thisb resource captures the time when Terraform is first applied.
 resource "time_static" "time" {}
 
 # This resource creates an Azure Resource Group.
