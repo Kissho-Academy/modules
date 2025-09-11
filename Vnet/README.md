@@ -3,6 +3,7 @@
 This module creates an Azure Virtual Network (VNet) with optional DDoS protection, DNS servers, and IPAM pool support.
 
 ## Features
+
 - Creates a single Azure VNet
 - Supports custom address space and DNS servers
 - Optional DDoS protection plan association
@@ -10,6 +11,7 @@ This module creates an Azure Virtual Network (VNet) with optional DDoS protectio
 - Tags resources, including a creation timestamp
 
 ## Usage
+
 ```hcl
 module "vnet" {
   source                = "./modules/Vnet"
@@ -31,6 +33,7 @@ module "vnet" {
 ```
 
 ## Input Variables
+
 - `name` (string): Name of the virtual network
 - `location` (string): Azure region
 - `resource_group_name` (string): Resource group name
@@ -41,10 +44,12 @@ module "vnet" {
 - `ip_address_pool` (object, optional): IPAM pool configuration
 
 ## Outputs
+
 - `id`: VNet resource ID
 - `name`: VNet name
 
 ## Recommendations & Best Practices
+
 - **Variable Descriptions:** Update variable descriptions to reference the virtual network, not resource group.
 - **Type Consistency:** Use `number` for `ip_address_pool.number_of_ip_addresses`.
 - **Conditional DDoS Protection:** Add a variable to enable/disable DDoS protection.
@@ -53,8 +58,10 @@ module "vnet" {
 - **Outputs:** Use direct references for outputs if only one VNet is created.
 
 ## Requirements
+
 - Terraform >= 1.0
 - AzureRM provider >= 3.0
 
 ## License
-MIT
+
+POST
