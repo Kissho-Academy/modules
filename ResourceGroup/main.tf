@@ -35,5 +35,5 @@ resource "azurerm_management_lock" "rg_lock" {
   depends_on = [azurerm_resource_group.this]
 
   # Only create the lock if 'enable_lock' variable is true.
-  count = var.enable_lock ? 1 : 0
+  count = var.lock ? 1 : 0
 }
